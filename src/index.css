@@ -1,4 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
 @import 'tailwindcss';
+
+@theme {
+  --color-my-red-500: hsl(10, 79%, 65%);
+  --color-my-red-100: hsl(26, 66%, 93%);
+  --color-my-brown-950: hsl(25, 47%, 15%);
+  --color-my-brown-400: hsl(28, 10%, 53%);
+  --color-my-blue-300: hsl(186, 34%, 65%);
+}
 
 * {
   box-sizing: border-box;
@@ -6,6 +16,7 @@
 
 body {
   min-height: 100vh;
+  font-family: 'DM Sans', monospace;
 }
 
 button {
