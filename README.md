@@ -1,16 +1,92 @@
-# React + Vite
+---
+# 📊 Expenses Chart Component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean and interactive expenses chart component built with **React** and **Tailwind CSS**.
+Visualizes spending data over the last 7 days with dynamic bar heights, and shows monthly total and percentage differences in a sleek, modern interface.
+---
 
-Currently, two official plugins are available:
+## 📸 Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Expenses Chart Screenshot](/screenshot.jpg)
 
-## React Compiler
+LIVE demo: [https://dzik0.github.io/expenses-chart-component](https://dzik0.github.io/expenses-chart-component)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 📅 **Last 7 days spend visualization** with bars scaled based on highest spending day
+- 💰 **Monthly total spending** displayed, formatted as currency
+- 📈 **Monthly percentage difference** compared to previous month, color-coded (red for increase, green for decrease)
+- 🎨 Styled using Tailwind CSS for fast, responsive and modern UI
+- 🔄 React functional components with hooks for state and calculations
+
+---
+
+## 🛠️ Tech Stack
+
+- **React**
+- **Tailwind CSS**
+- **Vite** (recommended for building & dev)
+
+---
+
+## 📁 File Structure
+
+```
+src/
+│
+├── comps/
+│   └── Wick.jsx              # Bar component with dynamic height & tooltip/info
+├── data.json                 # Example expenses data (monthly + daily)
+├── App.jsx                   # Main component calculating sums & rendering UI
+└── index.css                 # Tailwind and custom styles
+public/
+└── screenshot.jpg            # Preview screenshot image
+```
+
+---
+
+## 🧠 How It Works
+
+- Fetches spending data from `data.json`, grouped by month with daily breakdown
+- Calculates total spending for the last month
+- Computes percentage difference compared to previous month
+- Extracts last 7 days for the bar chart with tallest bar based on max spending
+- Bars rendered with dynamic heights relative to the highest spend day
+
+---
+
+## 📦 Installation
+
+1. **Clone the repo:**
+
+   ```bash
+   git clone https://github.com/Dzik0/expenses-chart-component.git
+   cd expenses-chart-component
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Run the project:**
+
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## 👨‍💻 Author
+
+**Dzik0**  
+_GitHub: [https://github.com/Dzik0](https://github.com/Dzik0)_
+
+---
+
+## 📝 License
+
+Open source under the [MIT License](LICENSE).
