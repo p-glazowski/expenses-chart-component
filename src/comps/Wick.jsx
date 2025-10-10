@@ -6,8 +6,14 @@ export default function Wick({ info, highestNumber }) {
     height: `${(info.moneySpent / highestNumber) * 100}%`,
     backgroundColor: `${highestNumber === info.moneySpent ? "hsl(186,34%,65%)" : "hsl(10,79%,65%)"}`,
   };
+  const highStyle = {
+    height: `${(info.moneySpent / highestNumber) * 100}%`,
+    backgroundColor: `${highestNumber === info.moneySpent ? "hsl(186,34%,65%)" : "hsl(10,79%,65%)"}`,
+    opacity: "0.7",
+  };
 
   const [showMoney, setShowMoney] = useState(false);
+  const [highlight, setHighlight] = useState(false);
 
   const showStyle = { display: `${showMoney ? "block" : "none"}` };
 
@@ -15,13 +21,15 @@ export default function Wick({ info, highestNumber }) {
     <div className="flex flex-col gap-2 text-center">
       <div className="grid min-h-43 items-end">
         <div
-          style={style}
+          style={highlight ? highStyle : style}
           className="relative cursor-pointer rounded"
           onMouseOver={() => {
             setShowMoney(true);
+            setHighlight(true);
           }}
           onMouseLeave={() => {
             setShowMoney(false);
+            setHighlight(false);
           }}
         >
           <div

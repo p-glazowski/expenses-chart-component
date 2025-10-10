@@ -11,6 +11,7 @@ export default function App() {
     (val, item) => (val > item.moneySpent ? val : item.moneySpent),
     lastSevenDays[0].moneySpent,
   );
+  const monthDiffColorStyle = { color: `${monthDiff >= 0 ? "red" : "green"}` };
 
   function calculateMonthDifference(data) {
     const lastToPrevMonth = data.length - 2;
@@ -43,7 +44,7 @@ export default function App() {
 
   return (
     <div className="bg-my-red-100 h-dvh w-full px-4 pt-15">
-      <div className="grid gap-5 rounded">
+      <div className="mx-auto grid max-w-[800px] gap-5 rounded">
         <section className="bg-my-red-500 flex items-center justify-between rounded-xl p-5 text-white">
           <div className="flex flex-col gap-1">
             <h1 className="">My balance</h1>
@@ -75,7 +76,7 @@ export default function App() {
               </p>
             </div>
             <div className="flex flex-col items-end justify-end">
-              <h3 className="font-bold">
+              <h3 className="font-bold" style={monthDiffColorStyle}>
                 {monthDiff > 0 ? "+" : ""}
                 {monthDiff}%
               </h3>
