@@ -9,7 +9,7 @@ Visualizes spending data over the last 7 days with dynamic bar heights, and show
 
 ![Expenses Chart Screenshot](/screenshot.jpg)
 
-LIVE demo: [https://dzik0.github.io/expenses-chart-component](https://dzik0.github.io/expenses-chart-component)
+LIVE demo: [https://p-glazowski.github.io/expenses-chart-component](https://p-glazowski.github.io/expenses-chart-component)
 
 ---
 
@@ -62,7 +62,7 @@ public/
 1. **Clone the repo:**
 
    ```bash
-   git clone https://github.com/Dzik0/expenses-chart-component.git
+   git clone https://github.com/p-glazowski/expenses-chart-component.git
    cd expenses-chart-component
    ```
 
@@ -82,8 +82,7 @@ public/
 
 ## 👨‍💻 Author
 
-**Dzik0**  
-_GitHub: [https://github.com/Dzik0](https://github.com/Dzik0)_
+**Piotr Głazowski**  
 
 ---
 
